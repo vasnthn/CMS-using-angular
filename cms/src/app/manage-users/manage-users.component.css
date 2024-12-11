@@ -1,0 +1,86 @@
+.manage-users {
+  padding: 20px;
+  margin-left: 250px; /* Adjust the margin to make space for the sidebar */
+}
+
+.manage-users h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.manage-users form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.manage-users form input {
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.manage-users form button {
+  padding: 10px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.manage-users form button:hover {
+  background-color: #0056b3;
+}
+
+.manage-users table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.manage-users table th,
+.manage-users table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.manage-users table th {
+  background-color: #f2f2f2;
+}
+
+.manage-users table td button {
+  padding: 5px 10px;
+  font-size: 0.9rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.manage-users table td button:hover {
+  background-color: #0056b3;
+}
+
+.manage-users table td button:last-child {
+  background-color: #dc3545;
+}
+
+.manage-users table td button:last-child:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .manage-users {
+    margin-left: 0; /* Remove the left margin on smaller screens */
+  }
+}

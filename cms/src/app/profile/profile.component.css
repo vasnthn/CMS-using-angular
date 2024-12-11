@@ -1,0 +1,169 @@
+/* Root variables for consistent color scheme */
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --text-color: #343a40;
+  --button-color: #007bff; /* Explicitly set button color */
+  --button-hover-color: #0056b3; /* Explicitly set button hover color */
+}
+
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--background-color);
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header styles from user-header */
+.user-header {
+  width: 250px;
+  height: 100vh; /* Full height */
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.user-header h1 {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  font-size: 24px; /* Adjusted font size for better readability */
+}
+
+.user-header ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  flex-grow: 1; /* Grow to fill the remaining space */
+  display: flex;
+  flex-direction: column;
+}
+
+.user-header ul li {
+  margin-bottom: 1rem;
+}
+
+.user-header ul li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 0.75rem 1rem; /* Adjusted padding for better click area */
+  display: block;
+  border-radius: 4px;
+  transition: background-color 0.3s, transform 0.3s; /* Added transform transition */
+}
+
+.user-header ul li a:hover {
+  background-color: #555;
+  transform: translateX(5px); /* Added a subtle transform effect */
+}
+
+@media (max-width: 768px) {
+  .user-header {
+    width: 100%; /* Full width on smaller screens */
+    height: auto;
+    position: relative; /* Change positioning */
+    flex-direction: row; /* Horizontal layout */
+  }
+  
+  .user-header ul {
+    flex-direction: row;
+    justify-content: space-around; /* Evenly space items */
+  }
+  
+  .user-header ul li {
+    margin-bottom: 0;
+  }
+  
+  .user-header ul li a {
+    padding: 0.5rem 1rem;
+  }
+}
+
+/* Dashboard Layout */
+.user-dashboard {
+  display: flex;
+  height: 100vh; /* Full viewport height */
+  margin-left: 250px; /* Adjust the margin to make space for the sidebar */
+  justify-content: center;
+  align-items: center;
+}
+
+/* Profile Container */
+.profile-container {
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  margin: auto;
+  margin-top: 2rem; /* Adjust for better spacing */
+  text-align: center; /* Center align the title and content */
+}
+
+.profile-container h2 {
+  margin-bottom: 1.5rem;
+  color: var(--primary-color);
+  font-size: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  text-align: left; /* Align labels and inputs to the left */
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem; /* Better readability */
+}
+
+button {
+  margin-top: 1rem; /* Add margin to separate the button from the inputs */
+  padding: 0.75rem 1.5rem;
+  background-color: #329cff; /* Explicitly set button color */
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #333; /* Explicitly set button hover color */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .user-dashboard {
+    margin-left: 0; /* Remove the left margin on smaller screens */
+  }
+
+  .profile-container {
+    padding: 1rem;
+  }
+}

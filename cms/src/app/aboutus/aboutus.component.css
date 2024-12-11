@@ -1,0 +1,125 @@
+/* Root variables for consistent color scheme */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --header-bg-color: #333;
+    --header-text-color: #fff;
+    --card-bg-color: #ffffff;
+    --card-border-color: #e0e0e0;
+  }
+  
+  /* About Us container styles */
+  .about-us-container {
+    padding: 2rem;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    font-family: 'Coolvetica', sans-serif; /* Apply Coolvetica font */
+    margin-top: 4rem; /* Space for fixed header */
+  }
+  
+  .about-us-container h1 {
+    font-size: 3rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .about-us-container p {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+  
+  /* Team section styles */
+  .team-section {
+    margin-top: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  .team-card {
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: calc(33% - 2rem); /* Adjust width for a responsive layout */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .team-card h2 {
+    font-size: 1.75rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+  }
+  
+  .team-card p {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Technologies section styles */
+  .technologies-section {
+    margin-top: 3rem;
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--card-border-color);
+    border-radius: 8px;
+    padding: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .technologies-section h2 {
+    font-size: 2rem;
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .technologies-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .technologies-section li {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: var(--background-color);
+    border-radius: 4px;
+    margin: 0.5rem;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .about-us-container h1 {
+      font-size: 2rem; /* Adjust font size for smaller screens */
+    }
+  
+    .about-us-container p {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  
+    .team-card {
+      width: calc(100% - 2rem); /* Full width for smaller screens */
+    }
+  
+    .team-card h2 {
+      font-size: 1.5rem;
+    }
+  
+    .team-card p, .technologies-section li {
+      font-size: 1rem; /* Adjust font size for smaller screens */
+    }
+  
+    .technologies-section h2 {
+      font-size: 1.75rem; /* Adjust font size for smaller screens */
+    }
+  }
+  

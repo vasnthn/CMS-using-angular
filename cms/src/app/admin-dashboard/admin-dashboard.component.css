@@ -1,0 +1,20 @@
+.admin-dashboard {
+  display: flex;
+}
+
+.admin-main-content {
+  margin-left: 250px; /* Adjust the margin to make space for the sidebar */
+  padding: 1rem;
+  flex-grow: 1;
+  background-color: #f8f9fa; /* Light background color */
+  height: 100vh; /* Full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.centered-text {
+  color: #333;
+  font-size: 24px; /* Adjusted font size for better readability */
+  text-align: center;
+}

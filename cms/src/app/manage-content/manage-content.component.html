@@ -1,0 +1,34 @@
+<app-admin-header></app-admin-header>
+<div class="display-container">
+  <h2>Uploaded Content</h2>
+  <div class="content-grid">
+    <div *ngFor="let file of files" class="content-item">
+      <div class="card" (click)="openModal(file)">
+        <ng-container *ngIf="isImage(file)">
+          <img [src]="getMediaUrl(file)" alt="Uploaded Content" class="card-image">
+        </ng-container>
+        <ng-container *ngIf="isVideo(file)">
+          <video [src]="getMediaUrl(file)" controls class="card-video"></video>
+        </ng-container>
+        <div class="card-content">
+          <p>{{ file.caption }}</p>
+          <button (click)="deleteFile(file.id); $event.stopPropagation()">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal structure -->
+<div class="modal" *ngIf="selectedFile" (click)="closeModal()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="close" (click)="closeModal()">&times;</span>
+    <ng-container *ngIf="isImage(selectedFile)">
+      <img [src]="getMediaUrl(selectedFile)" alt="Enlarged Content">
+    </ng-container>
+    <ng-container *ngIf="isVideo(selectedFile)">
+      <video [src]="getMediaUrl(selectedFile)" controls class="modal-video"></video>
+    </ng-container>
+    <p>{{ selectedFile.caption }}</p>
+  </div>
+</div>

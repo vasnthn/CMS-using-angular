@@ -1,0 +1,65 @@
+/* Root variables for consistent color scheme */
+:root {
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --background-color: #f8f9fa;
+    --text-color: #343a40;
+    --header-bg-color: #333;
+    --header-text-color: #fff;
+    --link-hover-color: #555;
+  }
+  
+  /* Header styles */
+  .app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: var(--header-bg-color);
+    color: var(--header-text-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-family: 'Coolvetica', sans-serif; /* Apply Coolvetica font */
+    font-size: 1.5rem;
+    margin: 0;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav ul li {
+    margin: 0;
+  }
+  
+  nav ul li a {
+    color: var(--header-text-color);
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  nav ul li a:hover {
+    background-color: var(--link-hover-color);
+    color: var(--header-text-color);
+  }
+  
+  @media (max-width: 768px) {
+    .app-header {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  
+    nav ul {
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+  }
+  
